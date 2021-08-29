@@ -1,0 +1,89 @@
+*{margin: 0; padding: 0;}
+ul,li{list-style: none;}
+a{text-decoration: none; color: black;}
+img{display: block; border:0;}
+
+html,body{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+
+
+.sub_menu,.top_menu,#section_1,#s_item_wrap_2,#l_cloud,#r_cloud,#quick_btn>li{
+    transition-duration: 0.5s;
+}
+
+/*ham버튼 이벤트*/
+.menu-trigger {
+    margin-right: 50px;
+    margin-bottom: 50px;
+}
+.menu-trigger,
+.menu-trigger span {
+    display: inline-block;
+    transition: all .4s;
+    box-sizing: border-box;
+}
+
+.menu-trigger {
+    position: relative;
+    width: 30px;
+    height: 24px;
+    top:50%;
+    left: 50%;
+    margin-top: -12px;
+    margin-left: -15px;
+}
+
+.menu-trigger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #595959;
+    border-radius: 4px;
+}
+
+.menu-trigger span:nth-of-type(1) {
+    top: 0;
+}
+
+.menu-trigger span:nth-of-type(2) {
+    top: 10px;
+}
+
+.menu-trigger span:nth-of-type(3) {
+    bottom: 0;
+}
+
+.menu-trigger.active-1 span:nth-of-type(1) {
+    -webkit-transform: translateY (20px) rotate (-45deg);
+    transform: translateY(20px) rotate(-45deg);
+}
+
+.menu-trigger.active-1 span:nth-of-type(2) {
+    opacity: 0;
+}
+
+.menu-trigger.active-1 span:nth-of-type(3) {
+    -webkit-transform: translateY(1px) rotate(45deg);
+    transform: translateY(1px) rotate(45deg);
+}
+
+#airplane{
+    animation: flight 1s 3s forwards;
+}
+
+@keyframes flight{
+    from{
+        top: -30;
+        left: -900;
+        opacity: 0;
+    }
+    to{
+        top: -30;
+        left: 300;
+        opacity: 1;
+    }
+}
